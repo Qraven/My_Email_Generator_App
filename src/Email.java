@@ -9,8 +9,6 @@ public class Email
     private String email;
     private int departmentNumber;
     private String department;
-    private String alternateEmail;
-    private int mailCapacity;
 
     Scanner sc = new Scanner(System.in);
 
@@ -47,14 +45,14 @@ public class Email
     public void createEmail()
     {
         email = this.firstName.toLowerCase() + "." + this.lastName.toLowerCase() + "." + department  + "@" + "email.com";
-        System.out.println("Twoj email to:");
+        System.out.println("Your email is:");
         System.out.println(email);
     }
 
     //Creating a random password
     public void passwordRandom(int length)
     {
-        String passwordSet = "ABCDEFGHIJKLMNOPRSTUWXYZ1234567890!@#$%";
+        String passwordSet = "ABCDEFGHIJKLMNOPRSTUWXYZ1234567890!@#$%"; //This is like a table of characters from which you wanna generate a password
 
         char[] password = new char[length];
 
@@ -64,7 +62,7 @@ public class Email
             password[i] = passwordSet.charAt(randomizer);
         }
         //Returning the password
-        System.out.println("Twoje hasło to:");
+        System.out.println("Your password is:");
         System.out.println(password);
     }
 
